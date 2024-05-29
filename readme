@@ -1,0 +1,16 @@
+Code to get started:
+
+conda create -n dm python=3.10 #create env 
+conda activate dm
+pip install requirements.txt #install requirements
+
+#open shell and download dataset
+>>> Python3
+    import datasets
+    d = datasets.load_dataset("imagenet-1k")
+    d.save_to_disk("./data")
+#convert dataset from arrow to pngs, multithread, eta ~ 1hr
+python3 trainloader.py
+
+#run training
+bash run.sh
